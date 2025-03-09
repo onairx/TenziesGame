@@ -72,7 +72,7 @@ export default function GameBox() {
                     Roll until all dice are the same. Click each die to freeze it at its current value between rolls.
                 </p>
             </div>
-            <div className="h-[50vh] w-full overflow-hidden flex justify-center items-center">
+            <div className="md:h-[50vh] h-[70vh] w-full overflow-hidden flex justify-center items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
