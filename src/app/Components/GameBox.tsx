@@ -10,7 +10,8 @@ export default function GameBox() {
         isHeld: boolean;
     }
     // getting an array of objects
-    function getRandomNumber(): DieObject[] {
+    // Memoize the getRandomNumber function
+    const getRandomNumber = React.useCallback((): DieObject[] => {
         console.log("getting random number");
         const theNumber: number[] = [];
         for (let i = 0; i < 10; i++) {
@@ -21,13 +22,16 @@ export default function GameBox() {
             value: num,
             isHeld: false
         }))
-    }
+    }, []);
+
     // using useState to store the numbers
     const [theArrayNum, setTheArrayNum] = React.useState<DieObject[]>([]);
+
     // using useEffect to render the numbers on client side
     React.useEffect(() => {
         setTheArrayNum(getRandomNumber());
-    },);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     // mapping the numbers to the Die component
     const theDiesNumbers = theArrayNum.map((num) => {
         return <Die
