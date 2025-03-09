@@ -3,7 +3,7 @@ import React from "react";
 type DieProps = {
     value: number;
     isHeld: boolean;
-    flipClick: any;
+    flipClick: (id: number) => void;
     id: number;
 };
 

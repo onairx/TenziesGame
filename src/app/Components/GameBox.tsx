@@ -27,7 +27,7 @@ export default function GameBox() {
     // using useEffect to render the numbers on client side
     React.useEffect(() => {
         setTheArrayNum(getRandomNumber());
-    }, []);
+    },);
     // mapping the numbers to the Die component
     const theDiesNumbers = theArrayNum.map((num) => {
         return <Die
