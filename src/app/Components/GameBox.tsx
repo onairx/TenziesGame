@@ -1,6 +1,10 @@
 import React from "react";
 import Die from "./Die";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
+
+
+
 export default function GameBox() {
   // define a proper type for dice objects
   type DieObject = {
@@ -103,6 +107,7 @@ export default function GameBox() {
           </button>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 }
