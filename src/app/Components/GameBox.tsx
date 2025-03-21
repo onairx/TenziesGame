@@ -91,8 +91,8 @@ export default function GameBox() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="md:w-fit md:h-fit h-fit w-[80vw] p-5 border-2 border-[#aacdff7d] bg-[#dee8f5]
-                        md:rounded-3xl rounded-xl flex flex-col justify-center items-center gap-5"
+          className="md:w-fit md:h-fit h-fit w-[80vw] p-5 border-2 border-[#abc4ff] bg-[#edf2fb]
+                        md:rounded-3xl rounded-xl flex flex-col justify-center items-center gap-5 shadow-xl"
         >
           <div className="md:w-auto h-full md:grid md:grid-cols-5 md:grid-rows-2 gap-5 grid-cols-3 grid-rows-3
           flex flex-wrap justify-center items-center w-full">
