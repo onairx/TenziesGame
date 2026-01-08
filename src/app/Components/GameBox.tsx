@@ -3,8 +3,6 @@ import Die from "./Die";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
 
-
-
 export default function GameBox() {
   // define a proper type for dice objects
   type DieObject = {
@@ -62,10 +60,10 @@ export default function GameBox() {
         return theNum.isHeld
           ? theNum
           : {
-            ...theNum,
-            value: Math.floor(Math.random() * 6) + 1,
-            isHeld: false,
-          };
+              ...theNum,
+              value: Math.floor(Math.random() * 6) + 1,
+              isHeld: false,
+            };
       });
     });
   }
@@ -94,8 +92,10 @@ export default function GameBox() {
           className="md:w-fit md:h-fit h-fit w-[80vw] p-5 border-2 border-[#abc4ff] bg-[#edf2fb]
                         md:rounded-3xl rounded-xl flex flex-col justify-center items-center gap-5 shadow-xl"
         >
-          <div className="md:w-auto h-full md:grid md:grid-cols-5 md:grid-rows-2 gap-5 grid-cols-3 grid-rows-3
-          flex flex-wrap justify-center items-center w-full">
+          <div
+            className="md:w-auto h-full md:grid md:grid-cols-5 md:grid-rows-2 gap-5 grid-cols-3 grid-rows-3
+          flex flex-wrap justify-center items-center w-full"
+          >
             {theDiesNumbers}
           </div>
           <button
